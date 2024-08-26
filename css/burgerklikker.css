@@ -77,6 +77,7 @@ h3 {
         'shopmenu kurv'
     ;
     gap: 100px;
+    justify-content: left;
 }
 
 .shop {
@@ -119,15 +120,64 @@ h3 {
     color: var(--rod);
 }
 
+.pointknap {
+    width: 100%;
+    height: auto;
+    padding: 10px 25px;
+    background-color: var(--rod);
+    border-radius: 6px;
+    border: 2px solid transparent;
+    border-color: var(--rod);
+    font-family: flame-regular;
+    color: var(--beige);
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+.pointknap:hover {
+    border: 2px solid;
+    background-color: var(--beige);
+    color: var(--rod);
+}
+
 .kurv {
     grid-area: kurv;
     display: flex;
     flex-flow: row wrap;
     gap: 30px;
+    justify-content: left;
 }
 
-.kurv div {
+/* Koupon CSS */
+.koupon {
     width: 250px;
-    height: 250px;
+    height: auto;
     background-color: var(--beige);
+    padding: 30px 15px 10px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 15px;
+    justify-content: space-evenly;
+}
+
+.koupon img {
+    width: 100%;
+    height: auto;
+}
+
+.koup-navn {
+    text-align: center;
+    font-family: flame-bold;
+    font-size: 24px;
+    color: var(--sort);
+}
+
+.koup-pris {
+    text-align: center;
+    font-size: 40px;
+    font-family: flame-bold;
+    color: var(--gron);
 }
