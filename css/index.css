@@ -223,7 +223,8 @@ footer-politik ul a:hover {
 }
 
 
-/*kalorie beregner --------------------------------------------*/
+/*kalorie beregner -----------------------------------------------------------------------------------------------*/
+
 #modalbutton:hover {
     background-color: #ffc800; /* Mørkere grøn baggrundsfarve når musen er over knappen */
     transform: scale(1.05); /* Lidt forstørrelse af knappen når musen er over */
@@ -339,3 +340,35 @@ footer-politik ul a:hover {
 #resultdiv{
     margin-top: -100px;
 }
+
+.modal-content h2 {
+    font-size: 20px; /* Mindre skriftstørrelse for overskriften */
+    font-weight: 700; /* Tilpas vægten, hvis nødvendigt */
+    margin-bottom: 15px; /* Tilføj en passende margin under overskriften */
+}
+
+.modal-content {
+    background-color: #ffc800;
+    margin: 10% auto; /* Øger margin for at give mere plads omkring modalboksen */
+    padding: 15px; /* Mindre padding for at gøre indholdet mere kompakt */
+    border: none;
+    width: 70%; /* Mindre bredde på modalboksen */
+    max-width: 400px; /* Gør den mindre med en max-bredde */
+    border-radius: 20px;
+}
+
+.modal {
+    display: none; /* Skjult som standard */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    color: #502314;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent sort baggrund */
+    backdrop-filter: blur(5px); /* Tilføj baggrundssløring */
+}
+
+/*kalorie beregner -----------------------------------------------------------------------------------------------*/
