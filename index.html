@@ -27,8 +27,48 @@
                 <li><a href="#">Om os</a></li>
                 <li><a href="#">Burgerspillet</a></li>
             </ul>
-            <a class="button">Kalorieberegner</a>
+            <a id="modalbutton" class="button" onclick="openModal()">Kalorieberegner</a>
+
         </nav>
+        <!-- Modal Container kalorieberegner -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Burger Kalorie Beregner</h2>
+            <div id="burgerContainer">
+                <label>Bolle:</label>
+                <input type="number" id="bolle" value="1" min="0">
+
+                <label>Bøf:</label>
+                <input type="number" id="bof" value="1" min="0">
+
+                <label>Ost:</label>
+                <input type="number" id="ost" value="1" min="0">
+
+                <label>Salat:</label>
+                <input type="number" id="salat" value="1" min="0">
+
+                <label>Tomat:</label>
+                <input type="number" id="tomat" value="1" min="0">
+
+                <label>Løg:</label>
+                <input type="number" id="log" value="1" min="0">
+
+                <label>Sovs:</label>
+                <select id="sovsType">
+                    <option value="none">Ingen Sovs</option>
+                    <option value="mayonnaise">Mayonnaise</option>
+                    <option value="ketchup">Ketchup</option>
+                    <option value="burgerdressing">Burgerdressing</option>
+                </select>
+                <input type="number" id="sovsAntal" value="1" min="0">                
+
+                <button type="button" onclick="beregnKalorier()">Beregn Kalorier</button>
+            </div>
+            <div id="result"></div>
+        </div>
+        <script src="beregner.js"></script>
+    </div>
     </header>
 
     <!-- Hero section -->
