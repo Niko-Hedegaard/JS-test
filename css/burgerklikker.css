@@ -153,7 +153,19 @@ h3 {
 /* Koupon CSS */
 .koupon {
     width: 250px;
-    height: auto;
+    height: 400px;
+    background-color: var(--beige);
+    padding: 30px 15px 10px 15px;
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 15px;
+    justify-content: space-evenly;
+}
+
+.koupon.active {
+    width: 250px;
+    height: 400px;
     background-color: var(--beige);
     padding: 30px 15px 10px 15px;
     display: flex;
@@ -168,14 +180,14 @@ h3 {
     height: auto;
 }
 
-.koup-navn {
+#koup-navn {
     text-align: center;
     font-family: flame-bold;
     font-size: 24px;
     color: var(--sort);
 }
 
-.koup-pris {
+#koup-pris {
     text-align: center;
     font-size: 40px;
     font-family: flame-bold;

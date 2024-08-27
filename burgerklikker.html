@@ -7,12 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/burgerklikker.css">
     <title>Burgerking</title>
+    <script src="js/burgerklikker.js" rel="script" defer></script>
 </head>
 <body>
     <div class="bkhero">
         <h1>Burger bonanza</h1>
         <h3>klik dig frem til rabatkoder</h3>
-        <img src="billeder/burgerklikker-burger.png" id="burgerklikker-burger">
+        <img src="billeder/burgerklikker-burger.png" id="burgerklikker-burger" onclick="klikburger()">
         <div id="point">Point: 0</div>
     </div>
     <div class="pointshoppen">
@@ -21,7 +22,7 @@
             <div class="shop">
                 <div class="shopmenu">
                     <p class="pointkost">150 point</p>
-                    <button class="pointknap">Sodavand</button>
+                    <button class="pointknap" onclick="sodavand()">Sodavand</button>
                     <button class="pointknap">Cocio</button>
                 </div>
                 <div class="shopmenu">
@@ -31,15 +32,45 @@
                 </div>
                 <div class="shopmenu">
                     <p class="pointkost">450 point</p>
-                    <button class="pointknap">Burger</button>
+                    <button class="pointknap" onclick="burgerkoup()">Burger</button>
                     <button class="pointknap">Sandwich</button>
                 </div>
             </div>
-            <div class="kurv">
-                <div class="koupon">
+            <div class="kurv" id="kurv">
+                <div class="koupon" id="sodakoup">
                     <img src="billeder/bk-kiosk-400x290_cocacola.png">
-                    <p class="koup-navn">Valgfri sodavand</p>
-                    <p class="koup-pris">10kr.</p>
+                    <p id="koup-navn">Valgfri sodavand</p>
+                    <p id="koup-pris">10kr.</p>
+                    <button class="pointknap">Indløs</button>
+                </div>
+                <div class="koupon" id="cociokoup">
+                    <img src="billeder/kingse52000307-06_burger_king_bøfsandwich_xl_digitalpictures_acrelec_kiosk_cocio_tiles_400x400.png">
+                    <p id="koup-navn">Cocio</p>
+                    <p id="koup-pris">10kr.</p>
+                    <button class="pointknap">Indløs</button>
+                </div>
+                <div class="koupon" id="pomfkoup">
+                    <img src="billeder/king-fries-medium.png">
+                    <p id="koup-navn">Medium pomfritter</p>
+                    <p id="koup-pris">15kr.</p>
+                    <button class="pointknap">Indløs</button>
+                </div>
+                <div class="koupon" id="chilikoup">
+                    <img src="billeder/bk_kiosk_400x290px-chili-cheese-4pcs.png">
+                    <p id="koup-navn">Chili Cheese tops</p>
+                    <p id="koup-pris">5kr.</p>
+                    <button class="pointknap">Indløs</button>
+                </div>
+                <div class="koupon" id="burgkoup">
+                    <img src="billeder/burgerklikker-burger.png">
+                    <p id="koup-navn">Valgfri burger</p>
+                    <p id="koup-pris">25kr.</p>
+                    <button class="pointknap">Indløs</button>
+                </div>
+                <div class="koupon" id="sandkoup">
+                    <img src="billeder/bk-kiosk-400x290_chicken-royale.png">
+                    <p id="koup-navn">Valgfri burger</p>
+                    <p id="koup-pris">25kr.</p>
                     <button class="pointknap">Indløs</button>
                 </div>
                 
