@@ -23,6 +23,7 @@ function beregnKalorier() {
         "sovsType": document.getElementById("sovsType").value,
         "sovsAntal": parseInt(document.getElementById("sovsAntal").value)
     };
+    console.log("Valgte ingredienser:", valgteIngredienser);
 
     let totalKalorier = 0;
 
@@ -30,15 +31,18 @@ function beregnKalorier() {
     for (let ingrediens of ingredienser) {
         const navn = ingrediens.navn;
         const kalorieprEnhed = ingrediens.kalorier;
+        console.log("Behandler ingrediens:", navn, "Kalorier pr. enhed:", kalorieprEnhed);
 
         // Hvis ingrediensen er en af sovsene
         if (navn === valgteIngredienser.sovsType) {
+            console.log("Sovs type fundet:", navn);
             totalKalorier += kalorieprEnhed * valgteIngredienser.sovsAntal;
         } else if (navn in valgteIngredienser && navn !== "sovsType" && navn !== "sovsAntal") {
             const antal = valgteIngredienser[navn] || 0;
             totalKalorier += kalorieprEnhed * antal;
         }
     }
+    console.log("Total kalorier beregnet:", totalKalorier);
 
     // Viser resultatet i modalboksen
     document.getElementById("result").innerHTML = `Total kalorier: ${totalKalorier} kcal`;
@@ -47,16 +51,19 @@ function beregnKalorier() {
 
 // Åbner modalboksen
 function openModal() {
+    console.log("Åbner modalboksen");
     document.getElementById("myModal").style.display = "block";
 }
 
 // Lukker modalboksen
 function closeModal() {
+    console.log("Lukker modalboksen");
     document.getElementById("myModal").style.display = "none";
 }
 
 // Lukker modalboksen, hvis brugeren klikker udenfor
 window.onclick = function (event) {
+    console.log("Klik på vinduet:", event.target);
     if (event.target == document.getElementById("myModal")) {
         closeModal();
     }
