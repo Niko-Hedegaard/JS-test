@@ -30,7 +30,7 @@ function beregnKalorier() {
     for (let ingrediens of ingredienser) {
         const navn = ingrediens.navn;
         const kalorieprEnhed = ingrediens.kalorier;
-        
+
         // Hvis ingrediensen er en af sovsene
         if (navn === valgteIngredienser.sovsType) {
             totalKalorier += kalorieprEnhed * valgteIngredienser.sovsAntal;
@@ -56,7 +56,7 @@ function closeModal() {
 }
 
 // Lukker modalboksen, hvis brugeren klikker udenfor
-window.onclick = function(event) {
+window.onclick = function (event) {
     if (event.target == document.getElementById("myModal")) {
         closeModal();
     }
