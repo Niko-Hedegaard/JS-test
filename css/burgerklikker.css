@@ -175,9 +175,15 @@ h3 {
     justify-content: space-evenly;
 }
 
-.koupon img {
+.billederamme {
+    width: 100%;
+    height: 150px;
+}
+
+.billederamme img {
     width: 100%;
     height: auto;
+    object-fit: contain;
 }
 
 #koup-navn {
@@ -192,4 +198,163 @@ h3 {
     font-size: 40px;
     font-family: flame-bold;
     color: var(--gron);
+}
+
+
+
+/* Header ----------------------------------------------------------------------------------------------------------- */
+
+header {
+    width: auto;
+    height: auto;
+    padding: 10px 250px;
+}
+
+.headermenu {
+    display: flex;
+    flex-flow: row nowrap;
+    margin: auto;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headermenu ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.headermenu ul li {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px, 0;
+    transition: 0.3s;
+}
+
+.headermenu ul a {
+    text-decoration: none;
+    color: var(--sort);
+    font-family: flame-sans;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    transition: 0.3s;
+}
+.headermenu ul a:hover {
+    color: var(--rod);
+}
+
+.headermenu div {
+    width: 60px;
+    height: auto;
+}
+
+.headermenu div>img {
+    width: 100%;
+    height: auto;
+}
+
+.button {
+    height: fit-content;
+    padding: 10px 20px;
+    background-color: white;
+    border-style: none;
+    border: 2px solid transparent;
+    background-color: var(--rod);
+    border-radius: 6px;
+    color: var(--beige);
+    font-family: flame-regular;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button:hover {
+    border-color: var(--rod);
+    background-color: var(--beige);
+    color: var(--rod);
+}
+
+
+
+
+
+
+/* footer menu */
+footer {
+    border-top: 2px solid;
+    border-color: var(--rod);
+    padding: 50px 150px;
+}
+
+nav-footer {
+    display: flex;
+    flex-flow: row nowrap;
+    margin: auto;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav-footer ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav-footer ul li {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px, 0;
+    transition: 0.3s;
+}
+
+nav-footer ul a {
+    text-decoration: none;
+    color: var(--sort);
+    font-family: flame-sans;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    transition: 0.3s;
+}
+
+nav-footer ul a:hover {
+    color: var(--rod);
+}
+
+footer-politik {
+    display: flex;
+    flex-flow: row nowrap;
+    margin: auto;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer-politik ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+footer-politik ul li {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px, 0;
+    transition: 0.3s;
+}
+
+footer-politik ul a {
+    text-decoration: none;
+    color: #502314a6;
+    font-family: flame-sans;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    transition: 0.3s;
+}
+
+footer-politik ul a:hover {
+    color: var(--rod);
 }
