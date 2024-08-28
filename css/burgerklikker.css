@@ -209,7 +209,7 @@ h3 {
   position: fixed;
   display: block;
   background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(50px);
 }
 
 .valg-vare {
@@ -223,7 +223,7 @@ h3 {
   margin: auto;
   align-items: center;
   gap: 10px;
-  padding: 15px 20px;
+  padding: 15px 15px;
   border-radius: 12px;
   top: 50%;
   left: 50%;
@@ -235,6 +235,7 @@ h3 {
   flex-direction: column;
   gap: 10px;
   text-align: center;
+  width: 100%;
 }
 
 .valgbtn {
@@ -250,14 +251,52 @@ h3 {
 }
 
 .valgbtn:hover {
-  background-color: var(--rod);
-  border-color: var(--rod);
+  background-color: var(--sort);
+  border-color: var(--sort);
   color: var(--beige);
 }
 
 .valgbtn.active {
   background-color: var(--gron);
   border-color: var(--gron);
+  color: var(--beige);
+}
+
+.confirm {
+  background-color: var(--sort);
+  border: 3px solid var(--sort);
+  color: var(--beige);
+  border-radius: 6px;
+  padding: 5px 45px;
+  width: 100%;
+  cursor: pointer;
+  font-family: flame-regular;
+  transition: 0.3s;
+  font-size: 15px;
+}
+
+.confirm:hover {
+  background-color: var(--gron);
+  border-color: var(--gron);
+  color: var(--beige);
+}
+
+.tilbage {
+  background-color: var(--beige);
+  border: 3px solid var(--rod);
+  color: var(--rod);
+  border-radius: 6px;
+  padding: 5px 45px;
+  width: 100%;
+  cursor: pointer;
+  font-family: flame-regular;
+  transition: 0.3s;
+  font-size: 15px;
+}
+
+.tilbage:hover {
+  background-color: var(--rod);
+  border-color: var(--rod);
   color: var(--beige);
 }
 

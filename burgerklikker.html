@@ -13,7 +13,8 @@
     <div class="valgbaggrund" id="valgsoda">
       <div class="valg-vare">
         <div id="oversigt"></div>
-        <button class="confirm">Bekræft</button>
+        <button class="confirm" onclick="Confirmsoda()">Bekræft</button>
+        <button class="tilbage" onclick="Tilbagesoda()">Tilbage</button>
       </div>
     </div>
 
@@ -29,7 +30,11 @@
           <li><a href="#">Delivery</a></li>
           <li><a href="#">Kuponer</a></li>
           <li><a href="#">Om os</a></li>
-          <li><a href="burgerklikker.html"> <img src="billeder/burgerspillet_klik.webp" class="bklogo"></a></li>
+          <li>
+            <a href="burgerklikker.html">
+              <img src="billeder/burgerspillet_klik.webp" class="bklogo"
+            /></a>
+          </li>
         </ul>
         <a id="modalbutton" class="button" onclick="openModal()"
           >Kalorieberegner</a

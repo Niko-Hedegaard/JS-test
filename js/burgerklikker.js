@@ -1,4 +1,4 @@
-let num = 0;
+let num = 500;
 let burgerklik = document.getElementById("burgerklikker-burger");
 let point = document.getElementById("point");
 let kurv = document.getElementById("kurv");
@@ -110,10 +110,24 @@ function Sandkoup() {
 /* 150 point -----------------------------------------------------------------------------------------*/
 
 // Valg af sodavand
+function Confirmsoda() {
+  document.getElementById("valgsoda").classList.remove("active");
+  document.getElementById("sodakoup").classList.remove("active");
+}
+
+function Tilbagesoda() {
+  document.getElementById("valgsoda").classList.remove("active");
+  document.getElementById("oversigt").innerHTML = clear;
+}
+
 function Valgafsoda() {
   let valgafsodabox = document.getElementById("valgsoda");
   let valgSoda = ["Coca-cola", "Coca-cola Zero", "Fanta", "Sprite Zero"];
   let oversigt = document.getElementById("oversigt");
+
+  if (oversigt.hasChildNodes()) {
+    oversigt.innerHTML = "";
+  }
 
   valgafsodabox.classList.add("active");
 
