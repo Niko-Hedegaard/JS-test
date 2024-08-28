@@ -208,17 +208,9 @@ window.onclick = function (event) {
     console.log("Klik på vinduet:", event.target);
     let searchContainer = document.getElementById("search-container");
     let searchInput = document.getElementById("searchInput");
+    let searchButton = document.getElementsByClassName("search-button")[0];
 
-
-    if (event.target !== searchContainer && event.target !== searchInput && !searchContainer.contains(event.target)) {
-        resultList.innerHTML = ""; // Ryd tidligere resultater
-    }
-}
-
-window.onclick = function (event) {
-    let resultList = document.getElementById("resultList");
-    let searchContainer = document.getElementById("search-container");
-    if (event.target != searchContainer) {
+    if (event.target !== searchContainer && event.target !== searchInput && event.target !== searchButton) {
         resultList.innerHTML = ""; // Ryd tidligere resultater
     }
 }
