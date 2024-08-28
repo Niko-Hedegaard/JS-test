@@ -12,21 +12,19 @@ function newsletterBtn() {
   // input fleter, med console log
 
   function opretBtn() {
-    let newsletterName = document.getElementById("input-name").value;
-    let newsletterEmail = document.getElementById("input-email").value;
-    if(newsletterName == "") {
-      alert("Empty Name");
+    let newsletterUser = {
+        newsletterName: document.getElementById("input-name").value,
+        newsletterEmail: document.getElementById("input-email").value
+    };
+
+    if (newsletterUser.newsletterName == "") {
+        alert("Empty Name");
+    } else if (newsletterUser.newsletterEmail == "") {
+        alert("Empty Email");
+    } else {
+        console.log("User info:", newsletterUser);
     }
-
-    else if(newsletterEmail == "")
-      alert("Empty Email")
-
-    else if(newsletterName)
-    console.log("Name: " + newsletterName);
-
-    else(newsletterEmail)
-    console.log("Email: " + newsletterEmail);
-  }
+}
 
 // textindhold to højrel indputfelt
 
