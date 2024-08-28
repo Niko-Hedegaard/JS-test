@@ -28,13 +28,14 @@ header {
     padding: 10px 250px;
 }
 
+
 .headermenu {
     display: flex;
     flex-flow: row nowrap;
     margin: auto;
     width: 100%;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-evenly;
 }
 
 .headermenu ul {
@@ -46,7 +47,7 @@ header {
 .headermenu ul li {
     display: flex;
     justify-content: space-evenly;
-    padding: 10px, 0;
+    padding-right: 10px;
     transition: 0.3s;
 }
 
@@ -523,3 +524,113 @@ footer-politik ul a:hover {
 
 
 /*slideshow -----------------------------------------------------------------------------------------------*/
+
+body {
+    font-family: 'flame-regular';
+    color: #502314;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+header .logo {
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+.search-container {
+    top: 20px;
+    display: flex;
+    align-items: center;
+    background-color: #e4000a;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1;
+    width: auto !important;
+}
+
+.search-input {
+    padding: 10px;
+    background-color: #f5ebdc;
+    color: #502314 !important;
+    border: none;
+    border-radius: 5px;
+    font-family: 'flame-regular';
+    font-size: 1em;
+    width: 150px;
+    margin-right: 10px;
+}
+
+.search-input::placeholder {
+    color: #502314;
+    opacity: 1;
+    /* Sørger for at placeholderfarven er tydelig */
+}
+
+
+.category-select {
+    padding: 10px;
+    background-color: #f5ebdc;
+    color: #502314;
+    border: none;
+    border-radius: 5px;
+    font-family: 'flame-regular';
+    font-size: 1em;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.search-button {
+    padding: 10px 20px;
+    background-color: #f5ebdc;
+    color: #502314;
+    border: none;
+    border-radius: 5px;
+    font-family: 'flame-regular';
+    font-size: 17px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px #502314;
+}
+
+.search-button:hover {
+    background-color: #ffe201;
+    border: 2px solid #e4000a;
+    transform: scale(1.05);
+}
+
+.result-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0 20px 0;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    max-width: 520px;
+    background-color: #DA291C;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 2, 5);
+    z-index: 99;
+    display: block !important;
+}
+
+.result-list li {
+    background-color: #f5ebdc;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    font-family: 'flame-regular';
+    color: #502314;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.result-list li:hover {
+    background-color: #FFEB3B;
+    border-color: #f5ebdc;
+    transform: scale(1.02);
+}

@@ -1,251 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!--Meta tags-->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="css/index.css" />
-    <title>Burgerking</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/newsletterstyles.css">
-    <link rel="typeface" src="Fonts/flameblid-webfont.woff2" />
-    <link rel="typeface" src="Fonts/flameregular-webfont.woff2" />
-    <script src="js/testside.js" defer></script>
-    <script src="js/newsletterscripts.js" defer></script>
-  </head>
 
-  <body>
-    <!-- Header section -->
-    <header>
-      <nav class="headermenu">
-        <div><img src="billeder/header-logo.svg" class="logoheader" /></div>
-        <ul>
-          <li><a href="#">Menu</a></li>
-          <li><a href="#">Restauranter</a></li>
-          <li><a href="#">Kampagner</a></li>
-          <li><a href="#">Karriere</a></li>
-          <li><a href="#">Delivery</a></li>
-          <li><a href="#">Kuponer</a></li>
-          <li><a href="#">Om os</a></li>
-          <li><a href="burgerklikker.html"> <img src="billeder/burgerspillet_klik.webp" class="bklogo"></a></li>
-        </ul>
-        <a id="modalbutton" class="button" onclick="openModal()"
-          >Kalorieberegner</a
-        >
-      </nav>
+<head>
+  <!--Meta tags-->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/index.css" />
+  <title>Burgerking</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/newsletterstyles.css">
+  <link rel="typeface" src="Fonts/flameblid-webfont.woff2" />
+  <link rel="typeface" src="Fonts/flameregular-webfont.woff2" />
+  <script src="js/testside.js" defer></script>
+  <script src="js/newsletterscripts.js" defer></script>
+  <script src="js/madvarer.js" defer></script>
+</head>
 
-<!-- newsletter div-->
+<body>
+  <!-- Header section -->
+  <header>
+    <nav class="headermenu">
+      <div><img src="billeder/header-logo.svg" class="logoheader" /></div>
+      <ul>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Restauranter</a></li>
+        <li><a href="#">Kampagner</a></li>
+        <li><a href="#">Karriere</a></li>
+        <li><a href="#">Delivery</a></li>
+        <li><a href="#">Kuponer</a></li>
+        <li><a href="#">Om os</a></li>
+        <li><a href="burgerklikker.html"> <img src="billeder/burgerspillet_klik.webp" class="bklogo"></a></li>
+      </ul>
+      <a id="modalbutton" class="button" onclick="openModal()">Kalorieberegner</a>
 
-      <div class="newsletter-site">
-        <div id="background-blur"></div>
-        <div id="floating-container">
-          <button id="chat-btn" onclick="newsletterBtn()">
-            <img src="billeder/newsletter-images/mail_icon_white_fill.svg" alt="chat button" />
-          </button>
-        </div>
-  
-<!-- newsletter container som indeholdder tekst mm.-->
+      <div class="search-container">
 
-        <div id="newsletter-container">
-          <div id="newsletter-holder">
-            <h1>Tilmeld dig vores liste!</h1>
-            <p id="p1">
-              Få de seneste nyheder og kuponer direkte i din indbakke! Indtast dit
-              navn, og din e-mail, så holder vi <br> dig opdateret!
+        <input id="searchInput" type="text" class="search-input" placeholder="Søg efter madvarer">
+
+        <!-- Dropdown for kategori -->
+        <select id="categorySelect" class="category-select">
+          <option value="all">Alle</option>
+          <option value="Burger">Burger</option>
+          <option value="Sides">Sides</option>
+          <option value="Dip">Dip</option>
+          <option value="Drikkevarer">Drikkevarer</option>
+          <option value="Dessert">Dessert</option>
+        </select>
+
+        <button class="search-button" onclick="searchItem()">Søg</button>
+      </div>
+
+      <ul id="resultList" class="result-list"></ul>
+    </nav>
+
+    <!-- newsletter div-->
+
+    <div class="newsletter-site">
+      <div id="background-blur"></div>
+      <div id="floating-container">
+        <button id="chat-btn" onclick="newsletterBtn()">
+          <img src="billeder/newsletter-images/mail_icon_white_fill.svg" alt="chat button" />
+        </button>
+      </div>
+
+      <!-- newsletter container som indeholdder tekst mm.-->
+
+      <div id="newsletter-container">
+        <div id="newsletter-holder">
+          <h1>Tilmeld dig vores liste!</h1>
+          <p id="p1">
+            Få de seneste nyheder og kuponer direkte i din indbakke! Indtast dit
+            navn, og din e-mail, så holder vi <br> dig opdateret!
+          </p>
+
+          <!-- input felter -->
+
+          <div id="text-input-container">
+            <div id="text-content">
+              <input id="input-name" type="text" placeholder="Navn" />
+              <input id="input-email" type="text" placeholder="E-mail" />
+              <button id="opret-btn" onclick="opretBtn()">Opret dig!</button>
+            </div>
+            <div id="checklist-holder">
+              <div id="checklist-container"></div>
+              <div id="newsletter-checkbox">
+                <input type="checkbox" name="nyheder-check" id="nyheder-checked">
+                <input type="checkbox" name="kuponer-check" id="kuponer-checked">
+                <input type="checkbox" name="weekends-tilbud-check" id="weekends-tilbud-checked">
+              </div>
+            </div>
+
+          </div>
+
+          <!-- lille bund tekst -->
+          <div id="newsletter-small-text">
+            <p id="p2">
+              Ved at registrere dig accepterer du at modtage nyhedsbreve sendt til
+              dig
             </p>
-
-<!-- input felter -->
-  
-            <div id="text-input-container">
-              <div id="text-content">
-                <input id="input-name" type="text" placeholder="Navn" />
-                <input id="input-email" type="text" placeholder="E-mail" />
-                <button id="opret-btn" onclick="opretBtn()">Opret dig!</button>
-              </div>
-              <div id="checklist-holder">
-                <div id="checklist-container"></div>
-                <div id="newsletter-checkbox">
-                  <input type="checkbox" name="nyheder-check" id="nyheder-checked">
-                  <input type="checkbox" name="kuponer-check" id="kuponer-checked">
-                  <input type="checkbox" name="weekends-tilbud-check" id="weekends-tilbud-checked">
-                </div>
-              </div>
-              
-            </div>
-
-<!-- lille bund tekst -->
-            <div id="newsletter-small-text">
-              <p id="p2">
-                Ved at registrere dig accepterer du at modtage nyhedsbreve sendt til
-                dig
-              </p>
-            </div>
-           
-  
           </div>
-        </div>
-      </div>
 
-      <!-- Modal Container kalorieberegner -->
-      <div id="myModal" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal()">&times;</span>
-          <h2>Burger Kalorie Beregner</h2>
-          <div id="burgerContainer">
-            <label>Bolle:</label>
-            <input type="number" id="bolle" value="1" min="0" />
 
-            <label>Bøf:</label>
-            <input type="number" id="bof" value="1" min="0" />
-
-            <label>Ost:</label>
-            <input type="number" id="ost" value="1" min="0" />
-
-            <label>Salat:</label>
-            <input type="number" id="salat" value="1" min="0" />
-
-            <label>Tomat:</label>
-            <input type="number" id="tomat" value="1" min="0" />
-
-            <label>Løg:</label>
-            <input type="number" id="log" value="1" min="0" />
-
-            <label>Sovs:</label>
-            <select id="sovsType">
-              <option value="none">Ingen Sovs</option>
-              <option value="mayonnaise">Mayonnaise</option>
-              <option value="ketchup">Ketchup</option>
-              <option value="burgerdressing">Burgerdressing</option>
-            </select>
-            <input type="number" id="sovsAntal" value="1" min="0" />
-
-            <button type="button" onclick="beregnKalorier()">
-              Beregn Kalorier
-            </button>
-          </div>
-          <div id="result"></div>
-        </div>
-        <script src="js/beregner.js"></script>
-      </div>
-    </header>
-
-    <div class="banner-container">
-      <div class="banner-container-kaffe slide">
-        <div class="banner-text-kaffe">Nyd en<br />Morgenkaffe</div>
-        <div class="image-container">
-          <img src="billeder/Kaffe.png" alt="Slide 1" class="kaffe-image" />
-          <p class="text">
-            Start din dag rigtigt med vores friskbryggede kaffe. Lavet på de
-            fineste bønner for en fyldig og aromatisk smag. Perfekt til en
-            hurtig pause eller sammen med din burger.
-          </p>
-        </div>
-      </div>
-
-      <div class="banner-container-ny-burger slide">
-        <div class="banner-text">Ny Burger!</div>
-        <div class="image-container">
-          <img
-            src="billeder/Ny-burger.png"
-            alt="Slide 2"
-            class="ny-burger-image"
-          />
-          <p class="text">
-            Oplev den helt nye burger Gourmet Grill Triple Cheese! En saftig
-            kombination af det bedste kød, smeltet ost og vores
-            signaturdressing. En smagsoplevelse du ikke vil gå glip af!
-          </p>
-        </div>
-      </div>
-
-      <div class="banner-container-plant slide">
-        <div class="banner-text">Plant Based-Whopper</div>
-        <div class="image-container">
-          <img
-            src="billeder/Plant-based-whopper.png"
-            alt="Slide 3"
-            class="plant-image"
-          />
-          <p class="text-plant">
-            Vælg det plantebaserede alternativ. En burger, der er lige så
-            smagfuld som den er bæredygtig. Frisk og fyldig med et lækkert bid,
-            der vil overraske selv kødelskere
-          </p>
-        </div>
-      </div>
-
-      <div class="banner-container-oreo slide">
-        <div class="banner-text-oreo">King Fusion Oreo</div>
-        <div class="image-container">
-          <img src="billeder/Oreo-is.png" alt="Slide 4" class="oreo-image" />
-          <p class="text-oreo">
-            Forkæl dig selv med vores cremede isdessert. Den perfekte, søde
-            afslutning på dit måltid . Lækker, kølende og uimodståelig. En
-            afkøling, du ikke vil gå glip af!
-          </p>
         </div>
       </div>
     </div>
 
-    <script src="js/slides.js"></script>
+    <!-- Modal Container kalorieberegner -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Burger Kalorie Beregner</h2>
+        <div id="burgerContainer">
+          <label>Bolle:</label>
+          <input type="number" id="bolle" value="1" min="0" />
 
-    <!-- Hero section -->
+          <label>Bøf:</label>
+          <input type="number" id="bof" value="1" min="0" />
 
-    <!-- Featured section -->
-    <section class="featured">
-      <h2>Vores favoritter</h2>
-      <div class="favoritsec">
-        <div class="favoritkort">
-          <div>
-            <img
-              src="billeder/future-ordering_single_1100x1024_b-f-sandwich.png"
-            />
-          </div>
-          <h3>Bøfsandwich</h3>
+          <label>Ost:</label>
+          <input type="number" id="ost" value="1" min="0" />
+
+          <label>Salat:</label>
+          <input type="number" id="salat" value="1" min="0" />
+
+          <label>Tomat:</label>
+          <input type="number" id="tomat" value="1" min="0" />
+
+          <label>Løg:</label>
+          <input type="number" id="log" value="1" min="0" />
+
+          <label>Sovs:</label>
+          <select id="sovsType">
+            <option value="none">Ingen Sovs</option>
+            <option value="mayonnaise">Mayonnaise</option>
+            <option value="ketchup">Ketchup</option>
+            <option value="burgerdressing">Burgerdressing</option>
+          </select>
+          <input type="number" id="sovsAntal" value="1" min="0" />
+
+          <button type="button" onclick="beregnKalorier()">
+            Beregn Kalorier
+          </button>
         </div>
-        <div class="favoritkort">
-          <div>
-            <img
-              src="billeder/bk_whopperrelaunch_dk_digital_picture_future_ordering_kiosk_1100x1024px_single_whopper_sticker.png"
-            />
-          </div>
-          <h3>Whopper</h3>
-        </div>
-        <div class="favoritkort">
-          <div><img src="billeder/400x290_pb-royale_singel.png" /></div>
-          <h3>Plant-based Royale</h3>
-        </div>
-        <div class="favoritkort">
-          <div><img src="billeder/gourmet-grill-triple-cheese.png" /></div>
-          <h3>Gourmet Grill Tripple Cheese</h3>
-        </div>
+        <div id="result"></div>
       </div>
-    </section>
+      <script src="js/beregner.js"></script>
+    </div>
+  </header>
 
-    <!-- Footer section -->
-    <footer>
-      <nav-footer>
-        <ul>
-          <li><a href="#">Menu</a></li>
-          <li><a href="#">Restauranter</a></li>
-          <li><a href="#">Kampagner</a></li>
-          <li><a href="#">Karriere</a></li>
-          <li><a href="#">Delivery</a></li>
-          <li><a href="#">Kuponer</a></li>
-          <li><a href="#">Om os</a></li>
-          <li><a href="#">Burgerspillet</a></li>
-        </ul>
-      </nav-footer>
-      <footer-politik>
-        <ul>
-          <li><a href="#">Privatpolitik</a></li>
-          <li><a href="#">Presse</a></li>
-          <li><a href="#">Allergen- og ernæringsinformation</a></li>
-          <li><a href="#">Franchise</a></li>
-        </ul>
-      </footer-politik>
-    </footer>
-  </body>
 
-  <script type="text/javascript" src="js/slides.js"></script>
+
+  <div class="banner-container">
+    <div class="banner-container-kaffe slide">
+      <div class="banner-text-kaffe">Nyd en<br />Morgenkaffe</div>
+      <div class="image-container">
+        <img src="billeder/Kaffe.png" alt="Slide 1" class="kaffe-image" />
+        <p class="text">
+          Start din dag rigtigt med vores friskbryggede kaffe. Lavet på de
+          fineste bønner for en fyldig og aromatisk smag. Perfekt til en
+          hurtig pause eller sammen med din burger.
+        </p>
+      </div>
+    </div>
+
+    <div class="banner-container-ny-burger slide">
+      <div class="banner-text">Ny Burger!</div>
+      <div class="image-container">
+        <img src="billeder/Ny-burger.png" alt="Slide 2" class="ny-burger-image" />
+        <p class="text">
+          Oplev den helt nye burger Gourmet Grill Triple Cheese! En saftig
+          kombination af det bedste kød, smeltet ost og vores
+          signaturdressing. En smagsoplevelse du ikke vil gå glip af!
+        </p>
+      </div>
+    </div>
+
+    <div class="banner-container-plant slide">
+      <div class="banner-text">Plant Based-Whopper</div>
+      <div class="image-container">
+        <img src="billeder/Plant-based-whopper.png" alt="Slide 3" class="plant-image" />
+        <p class="text-plant">
+          Vælg det plantebaserede alternativ. En burger, der er lige så
+          smagfuld som den er bæredygtig. Frisk og fyldig med et lækkert bid,
+          der vil overraske selv kødelskere
+        </p>
+      </div>
+    </div>
+
+    <div class="banner-container-oreo slide">
+      <div class="banner-text-oreo">King Fusion Oreo</div>
+      <div class="image-container">
+        <img src="billeder/Oreo-is.png" alt="Slide 4" class="oreo-image" />
+        <p class="text-oreo">
+          Forkæl dig selv med vores cremede isdessert. Den perfekte, søde
+          afslutning på dit måltid . Lækker, kølende og uimodståelig. En
+          afkøling, du ikke vil gå glip af!
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/slides.js"></script>
+
+  <!-- Hero section -->
+
+  <!-- Featured section -->
+  <section class="featured">
+    <h2>Vores favoritter</h2>
+    <div class="favoritsec">
+      <div class="favoritkort">
+        <div>
+          <img src="billeder/future-ordering_single_1100x1024_b-f-sandwich.png" />
+        </div>
+        <h3>Bøfsandwich</h3>
+      </div>
+      <div class="favoritkort">
+        <div>
+          <img
+            src="billeder/bk_whopperrelaunch_dk_digital_picture_future_ordering_kiosk_1100x1024px_single_whopper_sticker.png" />
+        </div>
+        <h3>Whopper</h3>
+      </div>
+      <div class="favoritkort">
+        <div><img src="billeder/400x290_pb-royale_singel.png" /></div>
+        <h3>Plant-based Royale</h3>
+      </div>
+      <div class="favoritkort">
+        <div><img src="billeder/gourmet-grill-triple-cheese.png" /></div>
+        <h3>Gourmet Grill Tripple Cheese</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer section -->
+  <footer>
+    <nav-footer>
+      <ul>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Restauranter</a></li>
+        <li><a href="#">Kampagner</a></li>
+        <li><a href="#">Karriere</a></li>
+        <li><a href="#">Delivery</a></li>
+        <li><a href="#">Kuponer</a></li>
+        <li><a href="#">Om os</a></li>
+        <li><a href="#">Burgerspillet</a></li>
+      </ul>
+    </nav-footer>
+    <footer-politik>
+      <ul>
+        <li><a href="#">Privatpolitik</a></li>
+        <li><a href="#">Presse</a></li>
+        <li><a href="#">Allergen- og ernæringsinformation</a></li>
+        <li><a href="#">Franchise</a></li>
+      </ul>
+    </footer-politik>
+  </footer>
+</body>
+
+<script type="text/javascript" src="js/slides.js"></script>
+
 </html>
