@@ -1,4 +1,4 @@
-// Liste over madvarer
+// Liste over madvarer (Arrays)
 const items = [
     // Burgers
     { name: "Whopper", type: "Burger" },
@@ -149,7 +149,7 @@ const items = [
     { name: "Æbletærte & Coffee & Ice Cream", type: "Dessert" },
 ];
 
-// Funktion til at søge efter madvarer
+// Funktion til at søge efter madvarer (Functions)
 function searchItem() {
     let searchInput = document.getElementById("searchInput").value.toLowerCase();
     let selectedCategory = document.getElementById("categorySelect").value;
@@ -158,7 +158,7 @@ function searchItem() {
     // Opret regulært udtryk til at matche hele ordet
     let regex = new RegExp(`\\b${searchInput}\\b`);
 
-    // Loop gennem madvarelisten og find match
+    // Loop gennem madvarelisten og find match (Loops)
     for (let i = 0; i < items.length; i++) {
         let nameMatches = regex.test(items[i].name.toLowerCase());
         let typeMatches = regex.test(items[i].type.toLowerCase());
@@ -181,13 +181,13 @@ function searchItem() {
     displayResults(results);
 }
 
-// Funktion til at vise resultaterne
+// Funktion til at vise resultaterne (Functions)
 function displayResults(results) {
     let resultList = document.getElementById("resultList");
     resultList.innerHTML = ""; // Ryd tidligere resultater
 
     if (results.length > 0) {
-        for (let i = 0; i < results.length; i++) {
+        for (let i = 0; i < results.length; i++) {  // Loop gennem resultaterne (Loops)
             let listItem = document.createElement("li");
             listItem.innerText = `${results[i].name} - ${results[i].type}`;
             resultList.appendChild(listItem);
@@ -206,7 +206,6 @@ searchInput.addEventListener("keypress", function (event) {
 
 window.onclick = function (event) {
     console.log("Klik på vinduet:", event.target);
-    let resultList = document.getElementById("resultList");
     let searchContainer = document.getElementById("search-container");
     let searchInput = document.getElementById("searchInput");
 
@@ -217,7 +216,6 @@ window.onclick = function (event) {
 }
 
 window.onclick = function (event) {
-    console.log("Klik på vinduet:", event.target);
     let resultList = document.getElementById("resultList");
     let searchContainer = document.getElementById("search-container");
     if (event.target != searchContainer) {
