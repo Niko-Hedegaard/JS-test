@@ -1,125 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <!--Meta tags-->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/burgerklikker.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/burgerklikker.css" />
     <title>Burgerking</title>
     <script src="js/burgerklikker.js" rel="script" defer></script>
-</head>
-<body>
+  </head>
+  <body>
+    <!-- HEADER -->
     <header>
-        <nav class="headermenu">
-            <div><img src="billeder/header-logo.svg" class="logoheader"></div>
-            <ul>
-                <li><a href="index.html">Menu</a></li>
-                <li><a href="#">Restauranter</a></li>
-                <li><a href="#">Kampagner</a></li>
-                <li><a href="#">Karriere</a></li>
-                <li><a href="#">Delivery</a></li>
-                <li><a href="#">Kuponer</a></li>
-                <li><a href="#">Om os</a></li>
-                <li><a href="burgerklikker.html">Burgerspillet</a></li>
-            </ul>
-            <a id="modalbutton" class="button" onclick="openModal()">Kalorieberegner</a>
-        </nav>
+      <nav class="headermenu">
+        <div><img src="billeder/header-logo.svg" class="logoheader" /></div>
+        <ul>
+          <li><a href="index.html">Menu</a></li>
+          <li><a href="#">Restauranter</a></li>
+          <li><a href="#">Kampagner</a></li>
+          <li><a href="#">Karriere</a></li>
+          <li><a href="#">Delivery</a></li>
+          <li><a href="#">Kuponer</a></li>
+          <li><a href="#">Om os</a></li>
+          <li><a href="burgerklikker.html">Burgerspillet</a></li>
+        </ul>
+        <a id="modalbutton" class="button" onclick="openModal()"
+          >Kalorieberegner</a
+        >
+      </nav>
     </header>
 
-    <div class="bkhero">
-        <h1>Burger bonanza</h1>
-        <h3>klik dig frem til rabatkoder</h3>
-        <img src="billeder/burgerklikker-burger.png" id="burgerklikker-burger" onclick="klikburger()">
-        <div id="point">Point: 0</div>
+    <!-- VALG AF VARE -->
+    <div class="valg-vare">
+      <div id="oversigt"></div>
+      <button class="confirm">Bekræft</button>
     </div>
+
+    <!-- HERO -->
+    <div class="bkhero">
+      <h1>Burger bonanza</h1>
+      <h3>klik dig frem til rabatkoder</h3>
+      <img
+        src="billeder/burgerklikker-burger.png"
+        id="burgerklikker-burger"
+        onclick="klikburger()"
+      />
+      <div id="point">Point: 0</div>
+    </div>
+
+    <!-- KOUPONSHOPPEN -->
     <div class="pointshoppen">
-        <h2>Kouponshoppen</h2>
-        <div class="pointshopmenu">
-            <div class="shop">
-                <div class="shopmenu">
-                    <p class="pointkost">50 point</p>
-                    <button class="pointknap" onclick="Sodavand()">Valgfri sodavand</button>
-                    <button class="pointknap" onclick="Cociokoup()">Cocio</button>
-                </div>
-                <div class="shopmenu">
-                    <p class="pointkost">100 point</p>
-                    <button class="pointknap" onclick="Pomfkoup()">Pomfritter</button>
-                    <button class="pointknap" onclick="Chilikoup()">Chili Cheese tops</button>
-                </div>
-                <div class="shopmenu">
-                    <p class="pointkost">150 point</p>
-                    <button class="pointknap" onclick="Burgerkoup()">Valgfri burger</button>
-                    <button class="pointknap" onclick="Sandkoup()">Valgfri sandwich</button>
-                </div>
-            </div>
-            <div class="kurv" id="kurv">
+      <h2>Kouponshoppen</h2>
+      <div class="pointshopmenu">
+        <div class="shop">
+          <div class="shopmenu">
+            <p class="pointkost">50 point</p>
+            <button class="pointknap" onclick="Sodavand()">
+              Valgfri sodavand
+            </button>
+            <button class="pointknap" onclick="Cociokoup()">Cocio</button>
+          </div>
+          <div class="shopmenu">
+            <p class="pointkost">100 point</p>
+            <button class="pointknap" onclick="Pomfkoup()">Pomfritter</button>
+            <button class="pointknap" onclick="Chilikoup()">
+              Chili Cheese tops
+            </button>
+          </div>
+          <div class="shopmenu">
+            <p class="pointkost">150 point</p>
+            <button class="pointknap" onclick="Burgerkoup()">
+              Valgfri burger
+            </button>
+            <button class="pointknap" onclick="Sandkoup()">
+              Valgfri sandwich
+            </button>
+          </div>
+        </div>
+        <div class="kurv" id="kurv"></div>
 
-                
-            </div>
-
+        <!-- KOUPONER -->
         <div class="koupon" id="sodakoup">
-            <div class="billederamme"><img src="billeder/bk-kiosk-400x290_cocacola.png"></div>
-            <p id="koup-navn">Valgfri sodavand</p>
-            <p id="koup-pris">10kr.</p>
-            <button class="pointknap">Indløs</button>
+          <div class="billederamme">
+            <img src="billeder/bk-kiosk-400x290_cocacola.png" />
+          </div>
+          <p id="koup-navn">Valgfri sodavand</p>
+          <p id="koup-pris">10kr.</p>
+          <button class="pointknap">Indløs</button>
         </div>
         <div class="koupon" id="cociokoup">
-            <div class="billederamme"><img src="billeder/kingse52000307-06_burger_king_bøfsandwich_xl_digitalpictures_acrelec_kiosk_cocio_tiles_400x400.png"></div>
-            <p id="koup-navn">Cocio</p>
-            <p id="koup-pris">10kr.</p>
-            <button class="pointknap">Indløs</button>
+          <div class="billederamme">
+            <img
+              src="billeder/kingse52000307-06_burger_king_bøfsandwich_xl_digitalpictures_acrelec_kiosk_cocio_tiles_400x400.png"
+            />
+          </div>
+          <p id="koup-navn">Cocio</p>
+          <p id="koup-pris">10kr.</p>
+          <button class="pointknap">Indløs</button>
         </div>
         <div class="koupon" id="pomfkoup">
-            <div class="billederamme"><img src="billeder/king-fries-medium.png"></div>
-            <p id="koup-navn">Medium pomfritter</p>
-            <p id="koup-pris">15kr.</p>
-            <button class="pointknap">Indløs</button>
+          <div class="billederamme">
+            <img src="billeder/king-fries-medium.png" />
+          </div>
+          <p id="koup-navn">Medium pomfritter</p>
+          <p id="koup-pris">15kr.</p>
+          <button class="pointknap">Indløs</button>
         </div>
         <div class="koupon" id="chilikoup">
-            <div class="billederamme"><img src="billeder/bk_kiosk_400x290px-chili-cheese-4pcs.png"></div>
-            <p id="koup-navn">Chili Cheese tops</p>
-            <p id="koup-pris">5kr.</p>
-            <button class="pointknap">Indløs</button>
+          <div class="billederamme">
+            <img src="billeder/bk_kiosk_400x290px-chili-cheese-4pcs.png" />
+          </div>
+          <p id="koup-navn">Chili Cheese tops</p>
+          <p id="koup-pris">5kr.</p>
+          <button class="pointknap">Indløs</button>
         </div>
         <div class="koupon" id="burgkoup">
-            <div class="billederamme"><img src="billeder/burgerklikker-burger.png"></div>
-            <p id="koup-navn">Valgfri burger</p>
-            <p id="koup-pris">25kr.</p>
-            <button class="pointknap">Indløs</button>
+          <div class="billederamme">
+            <img src="billeder/burgerklikker-burger.png" />
+          </div>
+          <p id="koup-navn">Valgfri burger</p>
+          <p id="koup-pris">25kr.</p>
+          <button class="pointknap">Indløs</button>
         </div>
         <div class="koupon" id="sandkoup">
-            <div class="billederamme"><img src="billeder/bk-kiosk-400x290_chicken-royale.png"></div>
-            <p id="koup-navn">Valgfri burger</p>
-            <p id="koup-pris">25kr.</p>
-            <button class="pointknap">Indløs</button>
+          <div class="billederamme">
+            <img src="billeder/bk-kiosk-400x290_chicken-royale.png" />
+          </div>
+          <p id="koup-navn">Valgfri burger</p>
+          <p id="koup-pris">25kr.</p>
+          <button class="pointknap">Indløs</button>
         </div>
-        </div>
+      </div>
     </div>
 
-
+    <!-- FOOTER -->
     <footer>
-        <nav-footer>
-            <ul>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Restauranter</a></li>
-                <li><a href="#">Kampagner</a></li>
-                <li><a href="#">Karriere</a></li>
-                <li><a href="#">Delivery</a></li>
-                <li><a href="#">Kuponer</a></li>
-                <li><a href="#">Om os</a></li>
-                <li><a href="#">Burgerspillet</a></li>
-            </ul>
-        </nav-footer>
-        <footer-politik>
-            <ul>
-                <li><a href="#">Privatpolitik</a></li>
-                <li><a href="#">Presse</a></li>
-                <li><a href="#">Allergen- og ernæringsinformation</a></li>
-                <li><a href="#">Franchise</a></li>
-            </ul>
-        </footer-politik>
+      <nav-footer>
+        <ul>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Restauranter</a></li>
+          <li><a href="#">Kampagner</a></li>
+          <li><a href="#">Karriere</a></li>
+          <li><a href="#">Delivery</a></li>
+          <li><a href="#">Kuponer</a></li>
+          <li><a href="#">Om os</a></li>
+          <li><a href="#">Burgerspillet</a></li>
+        </ul>
+      </nav-footer>
+      <footer-politik>
+        <ul>
+          <li><a href="#">Privatpolitik</a></li>
+          <li><a href="#">Presse</a></li>
+          <li><a href="#">Allergen- og ernæringsinformation</a></li>
+          <li><a href="#">Franchise</a></li>
+        </ul>
+      </footer-politik>
     </footer>
-</body>
-
+  </body>
 </html>

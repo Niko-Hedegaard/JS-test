@@ -1,360 +1,364 @@
 /* font faces */
 @font-face {
-    font-family: 'flame-regular';
-    src: url('../Fonts/flameregular-webfont.woff2');
+  font-family: "flame-regular";
+  src: url("../Fonts/flameregular-webfont.woff2");
 }
 @font-face {
-    font-family: 'flame-bold';
-    src: url('../Fonts/flamebold-webfont.woff2');
+  font-family: "flame-bold";
+  src: url("../Fonts/flamebold-webfont.woff2");
 }
 @font-face {
-    font-family: 'flame-sans';
-    src: url('../Fonts/flamesans-webfont.woff2');
+  font-family: "flame-sans";
+  src: url("../Fonts/flamesans-webfont.woff2");
 }
 
 :root {
-    font-family: flame-sans;
-    --rod: #c20;
-    --beige: #f5ebdc;
-    --sort: #502314;
-    --gron: #198737;
+  font-family: flame-sans;
+  --rod: #c20;
+  --beige: #f5ebdc;
+  --sort: #502314;
+  --gron: #198737;
 }
 
 * {
-    margin: 0;
-    box-sizing: border-box;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 h1 {
-    text-align: center;
-    font-family: flame-bold;
-    font-size: 96px;
-    color: var(--beige);
+  text-align: center;
+  font-family: flame-bold;
+  font-size: 96px;
+  color: var(--beige);
 }
 
 h2 {
-    text-align: center;
-    font-family: flame-bold;
-    font-size: 64px;
-    color: var(--sort);
+  text-align: center;
+  font-family: flame-bold;
+  font-size: 64px;
+  color: var(--sort);
 }
 
 h3 {
-    text-align: center;
-    font-family: flame-regular;
-    font-size: 45px;
-    color: var(--beige);
+  text-align: center;
+  font-family: flame-regular;
+  font-size: 45px;
+  color: var(--beige);
 }
 
 .bkhero {
-    background-color: var(--gron);
-    text-align: center;
-    padding: 35px 0 65px 0;
+  background-color: var(--gron);
+  text-align: center;
+  padding: 35px 0 65px 0;
 }
 
-.bkhero img{
-    width: 950px;
-    height: auto;
-    margin: -30px auto 0 auto;
-    cursor: pointer;
+.bkhero img {
+  width: 950px;
+  height: auto;
+  margin: -30px auto 0 auto;
+  cursor: pointer;
 }
 
 #point {
-    font-family: flame-bold;
-    font-size: 35px;
-    color: var(--beige);
+  font-family: flame-bold;
+  font-size: 35px;
+  color: var(--beige);
 }
 
 /* Point Shoppen */
 .pointshoppen {
-    padding: 65px 100px;
+  padding: 65px 100px;
 }
 
 .pointshopmenu {
-    padding-top: 80px;
-    display: grid;
-    grid-template-areas: 
-        'shopmenu kurv'
-    ;
-    gap: 100px;
-    justify-content: left;
+  padding-top: 80px;
+  display: grid;
+  grid-template-areas: "shopmenu kurv";
+  gap: 100px;
+  justify-content: left;
 }
 
 .shop {
-    grid-area: shopmenu;
-    display: flex;
-    flex-flow: column nowrap;
-    gap: 30px;
-    width: 250px;
+  grid-area: shopmenu;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 30px;
+  width: 250px;
 }
 
 .shopmenu {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .shopmenu p {
-    font-family: flame-regular;
-    font-size: 14px;
+  font-family: flame-regular;
+  font-size: 14px;
 }
 
 .shopmenu a {
-    width: 100%;
-    height: auto;
-    padding: 10px 25px;
-    background-color: var(--rod);
-    border-radius: 6px;
-    border: 2px solid transparent;
-    border-color: var(--rod);
-    font-family: flame-regular;
-    color: var(--beige);
-    text-align: center;
-    cursor: pointer;
-    transition: 0.3s;
+  width: 100%;
+  height: auto;
+  padding: 10px 25px;
+  background-color: var(--rod);
+  border-radius: 6px;
+  border: 2px solid transparent;
+  border-color: var(--rod);
+  font-family: flame-regular;
+  color: var(--beige);
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .shopmenu a:hover {
-    border: 2px solid;
-    background-color: var(--beige);
-    color: var(--rod);
+  border: 2px solid;
+  background-color: var(--beige);
+  color: var(--rod);
 }
 
 .pointknap {
-    width: 100%;
-    height: auto;
-    padding: 10px 25px;
-    background-color: var(--rod);
-    border-radius: 6px;
-    border: 2px solid transparent;
-    border-color: var(--rod);
-    font-family: flame-regular;
-    color: var(--beige);
-    text-align: center;
-    cursor: pointer;
-    transition: 0.3s;
-    font-size: 16px;
+  width: 100%;
+  height: auto;
+  padding: 10px 25px;
+  background-color: var(--rod);
+  border-radius: 6px;
+  border: 2px solid transparent;
+  border-color: var(--rod);
+  font-family: flame-regular;
+  color: var(--beige);
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 16px;
 }
 
 .pointknap:hover {
-    border: 2px solid;
-    background-color: var(--beige);
-    color: var(--rod);
+  border: 2px solid;
+  background-color: var(--beige);
+  color: var(--rod);
 }
 
 .kurv {
-    grid-area: kurv;
-    display: flex;
-    flex-flow: row wrap;
-    gap: 30px;
-    justify-content: left;
+  grid-area: kurv;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 30px;
+  justify-content: left;
 }
 
 /* Koupon CSS */
 .koupon {
-    width: 250px;
-    height: 400px;
-    background-color: var(--beige);
-    padding: 30px 15px 10px 15px;
-    display: none;
-    flex-direction: column;
-    gap: 20px;
-    border-radius: 15px;
-    justify-content: space-evenly;
+  width: 250px;
+  height: 400px;
+  background-color: var(--beige);
+  padding: 30px 15px 10px 15px;
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 15px;
+  justify-content: space-evenly;
 }
 
 .koupon.active {
-    width: 250px;
-    height: 400px;
-    background-color: var(--beige);
-    padding: 30px 15px 10px 15px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    border-radius: 15px;
-    justify-content: space-evenly;
+  width: 250px;
+  height: 400px;
+  background-color: var(--beige);
+  padding: 30px 15px 10px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 15px;
+  justify-content: space-evenly;
 }
 
 .billederamme {
-    width: 100%;
-    height: 150px;
+  width: 100%;
+  height: 150px;
 }
 
 .billederamme img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 #koup-navn {
-    text-align: center;
-    font-family: flame-bold;
-    font-size: 24px;
-    color: var(--sort);
+  text-align: center;
+  font-family: flame-bold;
+  font-size: 24px;
+  color: var(--sort);
 }
 
 #koup-pris {
-    text-align: center;
-    font-size: 40px;
-    font-family: flame-bold;
-    color: var(--gron);
+  text-align: center;
+  font-size: 40px;
+  font-family: flame-bold;
+  color: var(--gron);
 }
 
-
+/* Valg af vare menu */
+.valg-vare {
+  position: fixed;
+  display: flex;
+  width: 20%;
+  height: 100px;
+  background-color: var(--beige);
+  z-index: 1000;
+  margin: auto;
+  align-items: center;
+}
 
 /* Header ----------------------------------------------------------------------------------------------------------- */
 
 header {
-    width: auto;
-    height: auto;
-    padding: 10px 250px;
+  width: auto;
+  height: auto;
+  padding: 10px 250px;
 }
 
 .headermenu {
-    display: flex;
-    flex-flow: row nowrap;
-    margin: auto;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  margin: auto;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .headermenu ul {
-    display: flex;
-    align-items: center;
-    gap: 30px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }
 
 .headermenu ul li {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 10px, 0;
-    transition: 0.3s;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px, 0;
+  transition: 0.3s;
 }
 
 .headermenu ul a {
-    text-decoration: none;
-    color: var(--sort);
-    font-family: flame-sans;
-    display: flex;
-    justify-content: space-evenly;
-    list-style: none;
-    transition: 0.3s;
+  text-decoration: none;
+  color: var(--sort);
+  font-family: flame-sans;
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  transition: 0.3s;
 }
 .headermenu ul a:hover {
-    color: var(--rod);
+  color: var(--rod);
 }
 
 .headermenu div {
-    width: 60px;
-    height: auto;
+  width: 60px;
+  height: auto;
 }
 
-.headermenu div>img {
-    width: 100%;
-    height: auto;
+.headermenu div > img {
+  width: 100%;
+  height: auto;
 }
 
 .button {
-    height: fit-content;
-    padding: 10px 20px;
-    background-color: white;
-    border-style: none;
-    border: 2px solid transparent;
-    background-color: var(--rod);
-    border-radius: 6px;
-    color: var(--beige);
-    font-family: flame-regular;
-    cursor: pointer;
-    transition: 0.3s;
+  height: fit-content;
+  padding: 10px 20px;
+  background-color: white;
+  border-style: none;
+  border: 2px solid transparent;
+  background-color: var(--rod);
+  border-radius: 6px;
+  color: var(--beige);
+  font-family: flame-regular;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .button:hover {
-    border-color: var(--rod);
-    background-color: var(--beige);
-    color: var(--rod);
+  border-color: var(--rod);
+  background-color: var(--beige);
+  color: var(--rod);
 }
-
-
-
-
-
 
 /* footer menu */
 footer {
-    border-top: 2px solid;
-    border-color: var(--rod);
-    padding: 50px 150px;
+  border-top: 2px solid;
+  border-color: var(--rod);
+  padding: 50px 150px;
 }
 
 nav-footer {
-    display: flex;
-    flex-flow: row nowrap;
-    margin: auto;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  margin: auto;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
 }
 
 nav-footer ul {
-    display: flex;
-    align-items: center;
-    gap: 30px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }
 
 nav-footer ul li {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 10px, 0;
-    transition: 0.3s;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px, 0;
+  transition: 0.3s;
 }
 
 nav-footer ul a {
-    text-decoration: none;
-    color: var(--sort);
-    font-family: flame-sans;
-    display: flex;
-    justify-content: space-evenly;
-    list-style: none;
-    transition: 0.3s;
+  text-decoration: none;
+  color: var(--sort);
+  font-family: flame-sans;
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  transition: 0.3s;
 }
 
 nav-footer ul a:hover {
-    color: var(--rod);
+  color: var(--rod);
 }
 
 footer-politik {
-    display: flex;
-    flex-flow: row nowrap;
-    margin: auto;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  margin: auto;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
 }
 
 footer-politik ul {
-    display: flex;
-    align-items: center;
-    gap: 30px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }
 
 footer-politik ul li {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 10px, 0;
-    transition: 0.3s;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px, 0;
+  transition: 0.3s;
 }
 
 footer-politik ul a {
-    text-decoration: none;
-    color: #502314a6;
-    font-family: flame-sans;
-    display: flex;
-    justify-content: space-evenly;
-    list-style: none;
-    transition: 0.3s;
+  text-decoration: none;
+  color: #502314a6;
+  font-family: flame-sans;
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  transition: 0.3s;
+  margin-top: 25px;
 }
 
 footer-politik ul a:hover {
-    color: var(--rod);
+  color: var(--rod);
 }
