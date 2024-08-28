@@ -35,16 +35,18 @@ for (let inputPosition = 0; inputPosition < checklist.length; inputPosition++) {
 
 // function til at lukke newletter.
 
-// Lukker modalboksen
-function closeNewsletter() {
-  console.log("Lukker modalboksen");
-  document.getElementById("newsletter-container").style.display = "none";
-}
+// kode herfra virker ikke
 
-// Lukker modalboksen, hvis brugeren klikker udenfor
-window.onclick = function (event) {
-  console.log("Klik på vinduet:", event.target);
-  if (event.target == document.getElementById("newsletter-container")) {
-      closeNewsletter();
-  };
-}
+// // Lukker modalboksen
+// function closeNewsletter() {
+//   console.log("Lukker modalboksen");
+//   document.getElementById("newsletter-container").style.display = "none";
+// }
+
+// // Lukker modalboksen, hvis brugeren klikker udenfor
+// window.onclick = function (event) {
+//   console.log("Klik på vinduet:", event.target);
+//   if (event.target == document.getElementById("newsletter-container")) {
+//       closeNewsletter();
+//   };
+// }
