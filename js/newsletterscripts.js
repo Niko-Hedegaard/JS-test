@@ -35,11 +35,6 @@ for (let inputPosition = 0; inputPosition < checklist.length; inputPosition++) {
 
 // function til at lukke newletter.
 
-function openNewsletter() {
-  console.log("Åbner modalboksen");
-  document.getElementById("newsletter-container").style.display = "flex";
-}
-
 // Lukker modalboksen
 function closeNewsletter() {
   console.log("Lukker modalboksen");
@@ -49,6 +44,7 @@ function closeNewsletter() {
 // Lukker modalboksen, hvis brugeren klikker udenfor
 window.onclick = function (event) {
   console.log("Klik på vinduet:", event.target);
-  let modalContainer = document.getElementById("newsletter-container");
+  if (event.target == document.getElementById("newsletter-container")) {
       closeNewsletter();
+  };
 }
