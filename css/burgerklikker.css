@@ -253,6 +253,14 @@ header {
   color: var(--rod);
 }
 
+.bklogo {
+  width: 50px;
+}
+
+.bklogo:hover {
+  transform: scale(1.3);
+}
+
 .headermenu div {
   width: 60px;
   height: auto;
