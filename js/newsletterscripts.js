@@ -49,7 +49,6 @@ function closeNewsletter() {
 // Lukker modalboksen, hvis brugeren klikker udenfor
 window.onclick = function (event) {
   console.log("Klik på vinduet:", event.target);
-  if (event.target == document.getElementById("newsletter-container")) {
+  let modalContainer = document.getElementById("newsletter-container");
       closeNewsletter();
-  }
 }
