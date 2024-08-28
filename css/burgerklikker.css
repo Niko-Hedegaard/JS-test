@@ -199,15 +199,66 @@ h3 {
 }
 
 /* Valg af vare menu */
+.valgbaggrund {
+  display: none;
+}
+
+.valgbaggrund.active {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+}
+
 .valg-vare {
   position: fixed;
   display: flex;
-  width: 20%;
-  height: 100px;
+  flex-direction: column;
+  width: 15%;
+  height: auto;
   background-color: var(--beige);
   z-index: 1000;
   margin: auto;
   align-items: center;
+  gap: 10px;
+  padding: 15px 20px;
+  border-radius: 12px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#oversigt {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+}
+
+.valgbtn {
+  background-color: var(--beige);
+  border: 3px solid var(--sort);
+  color: var(--sort);
+  border-radius: 6px;
+  padding: 5px 45px;
+  width: 100%;
+  cursor: pointer;
+  font-family: flame-regular;
+  transition: 0.3s;
+}
+
+.valgbtn:hover {
+  background-color: var(--rod);
+  border-color: var(--rod);
+  color: var(--beige);
+}
+
+.valgbtn.active {
+  background-color: var(--gron);
+  border-color: var(--gron);
+  color: var(--beige);
 }
 
 /* Header ----------------------------------------------------------------------------------------------------------- */
