@@ -7,9 +7,11 @@
     <link rel="stylesheet" href="css/index.css" />
     <title>Burgerking</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/newsletterstyles.css">
     <link rel="typeface" src="Fonts/flameblid-webfont.woff2" />
     <link rel="typeface" src="Fonts/flameregular-webfont.woff2" />
     <script src="js/testside.js" defer></script>
+    <script src="js/newsletterscripts.js" defer></script>
   </head>
 
   <body>
@@ -31,6 +33,59 @@
           >Kalorieberegner</a
         >
       </nav>
+
+<!-- newsletter div-->
+
+      <div class="newsletter-site">
+        <div id="background-blur"></div>
+        <div id="floating-container">
+          <button id="chat-btn" onclick="newsletterBtn()">
+            <img src="billeder/newsletter-images/mail_icon_white_fill.svg" alt="chat button" />
+          </button>
+        </div>
+  
+<!-- newsletter container som indeholdder tekst mm.-->
+
+        <div id="newsletter-container">
+          <div id="newsletter-holder">
+            <h1>Tilmeld dig vores liste!</h1>
+            <p id="p1">
+              Få de seneste nyheder og kuponer direkte i din indbakke! Indtast dit
+              navn, og din e-mail, så holder vi <br> dig opdateret!
+            </p>
+
+<!-- input felter -->
+  
+            <div id="text-input-container">
+              <div id="text-content">
+                <input id="input-name" type="text" placeholder="Navn" />
+                <input id="input-email" type="text" placeholder="E-mail" />
+                <button id="opret-btn" onclick="opretBtn()">Opret dig!</button>
+              </div>
+              <div id="checklist-holder">
+                <div id="checklist-container"></div>
+                <div id="newsletter-checkbox">
+                  <input type="checkbox" name="nyheder-check" id="nyheder-checked">
+                  <input type="checkbox" name="kuponer-check" id="kuponer-checked">
+                  <input type="checkbox" name="weekends-tilbud-check" id="weekends-tilbud-checked">
+                </div>
+              </div>
+              
+            </div>
+
+<!-- lille bund tekst -->
+            <div id="newsletter-small-text">
+              <p id="p2">
+                Ved at registrere dig accepterer du at modtage nyhedsbreve sendt til
+                dig
+              </p>
+            </div>
+           
+  
+          </div>
+        </div>
+      </div>
+
       <!-- Modal Container kalorieberegner -->
       <div id="myModal" class="modal">
         <div class="modal-content">

@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'flame-regular';
+    src: url('fonts/flameregular-webfont.woff2');
+}
+@font-face {
+    font-family: 'flame-bold';
+    src: url('fonts/flamebold-webfont.woff2');
+}
+@font-face {
+    font-family: 'flame-sans';
+    src: url('fonts/flamesans-webfont.woff2');
+}
+
+:root {
+    font-family: flame-sans;
+    --rod: #c20;
+    --beige: #f5ebdc;
+    --sort: #502314;
+    --gron: #198737;
+}
+
+#floating-container{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 100px 60px;
+    z-index: 1;
+}
+
+#chat-btn{
+    cursor: pointer;
+    border: none;
+    background-color: var(--sort);
+    border-radius: 20px;
+    width: 5rem;
+    height: 5rem;
+}
+
+#chat-btn:hover{
+    transition: all 0.3s;
+    transform: scale(1.08);
+}
+
+#newsletter-container{
+    display: none;
+    position:fixed;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    top:0;
+    left:0;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 9999;
+}
+
+#newsletter-holder{
+    color: var(--beige);
+    font-size: 20px;
+    line-height: 30px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--sort);
+    padding: 70px 40px 70px 40px;
+    border-radius: 20px;
+}
+
+#newsletter-holder h1{
+    font-family: "flame-bold";
+    letter-spacing: 2px;
+    font-size: 60px;
+    line-height: 58px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: var(--beige);
+}
+
+#p1{
+    margin-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#p2{
+    display: flex;
+    justify-content: center;
+}
+
+#newsletter-small-text p{
+    font-size: 14px;
+}
+
+#text-input-container{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    padding: 18px;
+}
+
+#text-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    width: 40%;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    margin-left: 90px;
+}
+
+#text-content input{
+    border: none;
+    padding: 18px;
+    border-radius: 6px;
+}
+
+#opret-btn{
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-color: var(--rod);
+    padding: 18px;
+    border-radius: 6px;
+    background-color: var(--rod);
+    color: #ffffff;
+}
+
+#opret-btn:hover{
+    background-color: #ffffff;
+    color: var(--rod);
+}
+
+#checklist-holder{
+    display: flex;
+    flex-direction: row;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 6px;
+}
+
+#checklist-container{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 100%;
+}
+
+#checklist-container p{
+    display: flex;
+    align-items: center;
+    color: var(--sort);
+}
+
+#newsletter-checkbox{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 20px;
+}
+
+#newsletter-checkbox input[type="checkbox"]{
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    height: 1rem;
+    width: 1rem;
+    background-color: var(--beige);
+    border-radius: 3px;
+}
+
+#newsletter-checkbox input[type="checkbox"]:checked{
+    cursor: pointer;
+    background-color: var(--sort);
+}
+    
+    
+
+    
