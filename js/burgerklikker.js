@@ -109,4 +109,24 @@ function Sandkoup() {
 }
 /* 150 point -----------------------------------------------------------------------------------------*/
 
-/* Vælg sodavand */
+// Valg af sodavand
+function Valgafsoda() {
+  let valgafsodabox = document.getElementById("valgsoda");
+  let valgSoda = ["Coca-cola", "Coca-cola Zero", "Fanta", "Sprite Zero"];
+  let oversigt = document.getElementById("oversigt");
+
+  valgafsodabox.classList.add("active");
+
+  for (let s = 0; s < valgSoda.length; s++) {
+    let valgbtn = document.createElement("valgbtn");
+    let t = document.createTextNode(valgSoda[s]);
+    valgbtn.classList.add("valgbtn");
+    valgbtn.appendChild(t);
+    oversigt.appendChild(valgbtn);
+    valgbtn.addEventListener("click", Bekraft);
+
+    function Bekraft() {
+      valgbtn.classList.toggle("active");
+    }
+  }
+}

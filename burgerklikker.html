@@ -9,6 +9,14 @@
     <script src="js/burgerklikker.js" rel="script" defer></script>
   </head>
   <body>
+    <!-- VALG AF VARE -->
+    <div class="valgbaggrund" id="valgsoda">
+      <div class="valg-vare">
+        <div id="oversigt"></div>
+        <button class="confirm">Bekræft</button>
+      </div>
+    </div>
+
     <!-- HEADER -->
     <header>
       <nav class="headermenu">
@@ -28,12 +36,6 @@
         >
       </nav>
     </header>
-
-    <!-- VALG AF VARE -->
-    <div class="valg-vare">
-      <div id="oversigt"></div>
-      <button class="confirm">Bekræft</button>
-    </div>
 
     <!-- HERO -->
     <div class="bkhero">
@@ -85,7 +87,7 @@
           </div>
           <p id="koup-navn">Valgfri sodavand</p>
           <p id="koup-pris">10kr.</p>
-          <button class="pointknap">Indløs</button>
+          <button class="pointknap" onclick="Valgafsoda()">Indløs</button>
         </div>
         <div class="koupon" id="cociokoup">
           <div class="billederamme">
