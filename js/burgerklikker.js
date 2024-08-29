@@ -127,6 +127,7 @@ function Valgafsoda() {
 
   if (oversigt.hasChildNodes()) {
     oversigt.innerHTML = "";
+    console.log("intet indhold");
   }
 
   valgafsodabox.classList.add("active");
