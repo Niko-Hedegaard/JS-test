@@ -32,21 +32,3 @@ let checklist = ["<p>Nyheder</p>", "<hr>", "<p>Kuponer</p>", "<hr>", "<p>Weekend
 for (let inputPosition = 0; inputPosition < checklist.length; inputPosition++) {
   document.getElementById("checklist-container").innerHTML += checklist[inputPosition];
 }
-
-// function til at lukke newletter.
-
-// kode herfra virker ikke
-
-// // Lukker modalboksen
-// function closeNewsletter() {
-//   console.log("Lukker modalboksen");
-//   document.getElementById("newsletter-container").style.display = "none";
-// }
-
-// // Lukker modalboksen, hvis brugeren klikker udenfor
-// window.onclick = function (event) {
-//   console.log("Klik på vinduet:", event.target);
-//   if (event.target == document.getElementById("newsletter-container")) {
-//       closeNewsletter();
-//   };
-// }
