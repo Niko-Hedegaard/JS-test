@@ -101,6 +101,7 @@
 
 #newsletter-small-text p{
     font-size: 14px;
+    font-family: 'flame-regular';
 }
 
 #text-input-container{
@@ -129,6 +130,7 @@
 
 #opret-btn{
     cursor: pointer;
+    font-family: 'flame-regular';
     border: 2px solid transparent;
     border-color: var(--rod);
     padding: 18px;
@@ -152,6 +154,7 @@
 
 #checklist-container{
     display: flex;
+    font-family: 'flame-regular';
     justify-content: space-around;
     flex-direction: column;
     height: 100%;
