@@ -32,3 +32,4 @@ let checklist = ["<p>Nyheder</p>", "<hr>", "<p>Kuponer</p>", "<hr>", "<p>Weekend
 for (let inputPosition = 0; inputPosition < checklist.length; inputPosition++) {
   document.getElementById("checklist-container").innerHTML += checklist[inputPosition];
 } 
+
